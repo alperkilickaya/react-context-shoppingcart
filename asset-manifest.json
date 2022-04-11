@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-context-shoppingcart/static/css/main.eb0e1f1e.chunk.css",
+    "main.js": "/react-context-shoppingcart/static/js/main.cfeed941.chunk.js",
+    "main.js.map": "/react-context-shoppingcart/static/js/main.cfeed941.chunk.js.map",
+    "runtime-main.js": "/react-context-shoppingcart/static/js/runtime-main.56346ecc.js",
+    "runtime-main.js.map": "/react-context-shoppingcart/static/js/runtime-main.56346ecc.js.map",
+    "static/js/2.68d1a98e.chunk.js": "/react-context-shoppingcart/static/js/2.68d1a98e.chunk.js",
+    "static/js/2.68d1a98e.chunk.js.map": "/react-context-shoppingcart/static/js/2.68d1a98e.chunk.js.map",
+    "index.html": "/react-context-shoppingcart/index.html",
+    "static/css/main.eb0e1f1e.chunk.css.map": "/react-context-shoppingcart/static/css/main.eb0e1f1e.chunk.css.map",
+    "static/js/2.68d1a98e.chunk.js.LICENSE.txt": "/react-context-shoppingcart/static/js/2.68d1a98e.chunk.js.LICENSE.txt",
+    "static/media/meals.2971f633.jpeg": "/react-context-shoppingcart/static/media/meals.2971f633.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.56346ecc.js",
+    "static/js/2.68d1a98e.chunk.js",
+    "static/css/main.eb0e1f1e.chunk.css",
+    "static/js/main.cfeed941.chunk.js"
+  ]
+}
