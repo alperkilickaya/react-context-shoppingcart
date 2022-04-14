@@ -1,1 +1,1 @@
-# still under development 14.04.2022
+# react context used adding shopping cart saple
