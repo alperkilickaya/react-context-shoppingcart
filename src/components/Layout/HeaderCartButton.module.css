@@ -34,7 +34,6 @@
 .button:hover .badge,
 .button:active .badge {
   background-color: #92320c;
-  animation: bump 1s ease-out forwards;
 }
 
 .bump {

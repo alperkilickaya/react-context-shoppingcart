@@ -52,6 +52,35 @@ const cartReducer = (state, action) => {
       totalAmount: updatedTotalAmount,
     };
   }
+  if (action.type === "REMOVE") {
+    //action.payload(id) ile gelen item'ın index'ini buluyoruz.
+    const existingCartItemIndex = state.items.findIndex(
+      (item) => item.id === action.payload
+    );
+    // mevcut state'de existingItem'ı buluyoruz.
+    const existingItem = state.items[existingCartItemIndex];
+    // mevcut state'in total amount'ını güncelliyoruz.
+    const updatedTotalAmount = state.totalAmount - existingItem.price;
+
+    let updatedItems;
+    // eğer sepette aynı üründen 1 tane varsa ürünü state'den kaldırıyoruz. Bu sayede bu üründen context'te kalmıyorç
+    if (existingItem.amount === 1) {
+      updatedItems = state.items.filter((item) => item.id !== action.payload);
+      // eğer gelen item sepette 1'den fazla varsa
+    } else {
+      //öncelikle mevcut item'ın amount'ını 1 azaltıyoruz.
+      const UpdatedItem = { ...existingItem, amount: existingItem.amount - 1 };
+      // mevcut items'ın kopyasını oluşturuyoruz. Bu immutablility'i sağlıyor.
+      updatedItems = [...state.items];
+      // aynı item'ı yeni gelen ile override ediyoruz. Bu sayede 1 tane azalmış olarak context'de tutuyoruz.
+      // 1 tane kalınca ve tekrar remove gelirse if durumuna girer ve item context'ten kaldırılır.
+      updatedItems[existingCartItemIndex] = UpdatedItem;
+    }
+    return {
+      items: updatedItems,
+      totalAmount: updatedTotalAmount,
+    };
+  }
   //initial state'i default olarak dön.
   return defaultCartState;
 };
